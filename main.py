@@ -69,6 +69,7 @@ class MapsAPI(QMainWindow):
         self.image.setPixmap(self.pixmap)
 
     def keyPressEvent(self, event):
+        print(event.key())
         if event.key() == Qt.Key.Key_PageUp:
             if self.spn[0] <= 1:
                 self.spn[0] += 0.002
@@ -79,14 +80,18 @@ class MapsAPI(QMainWindow):
 
                 self.spn[0] -= 0.002
                 self.spn[1] -= 0.002
-        if event.key() == Qt.Key.Key_Up:
-            self.lt += 0.001
-        if event.key() == Qt.Key.Key_Down:
-            self.lt -= 0.001
         if event.key() == Qt.Key.Key_Left:
+            print('LEFT')
             self.ln -= 0.001
         if event.key() == Qt.Key.Key_Right:
+            print('RIGHT')
             self.ln += 0.001
+        if event.key() == Qt.Key.Key_Up:
+            print('UP')
+            self.lt += 0.001
+        if event.key() == Qt.Key.Key_Down:
+            print('DOWN')
+            self.lt -= 0.001
 
         if event.key() == Qt.Key.Key_F1:
             self.l = 'map'

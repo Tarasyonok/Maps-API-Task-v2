@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>700</width>
-    <height>611</height>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="searchInput"/>
+         <widget class="QLineEdit" name="searchInput">
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="searchBtn">
@@ -101,6 +105,9 @@
               <height>450</height>
              </size>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -141,6 +148,9 @@
         </item>
         <item>
          <widget class="QLineEdit" name="fullAddress">
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
           <property name="readOnly">
            <bool>true</bool>
           </property>
